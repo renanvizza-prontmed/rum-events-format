@@ -9,12 +9,17 @@
       "$ref": "_common-schema.json"
     },
     {
-      "required": ["telemetry"],
+      "required": [
+        "telemetry"
+      ],
       "properties": {
         "telemetry": {
           "type": "object",
           "description": "The telemetry configuration information",
-          "required": ["type", "configuration"],
+          "required": [
+            "type",
+            "configuration"
+          ],
           "properties": {
             "type": {
               "type": "string",
@@ -136,7 +141,13 @@
                   "type": "array",
                   "items": {
                     "type": "string",
-                    "enum": ["datadog", "b3", "b3multi", "tracecontext"]
+                    "enum": [
+                      "openobserve",
+                      "datadog",
+                      "b3",
+                      "b3multi",
+                      "tracecontext"
+                    ]
                   },
                   "description": "A list of selected tracing propagators"
                 },

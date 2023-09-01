@@ -1,8 +1,8 @@
 {
   "name": "rum-events-format",
   "version": "1.0.0",
-  "description": "JSON schema of Datadog RUM events",
-  "repository": "https://github.com/DataDog/rum-events-format.git",
+  "description": "JSON schema of openobserve RUM events",
+  "repository": "https://github.com/openobserve/rum-events-format.git",
   "private": true,
   "main": "cjs/src/index.js",
   "types": "cjs/src/index.d.ts",

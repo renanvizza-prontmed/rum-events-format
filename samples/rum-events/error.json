@@ -12,12 +12,12 @@
   "view": {
     "id": "623d50fd-75cf-4025-97d2-e51ff94171f6",
     "referrer": "",
-    "url": "https://app.datadoghq.com/rum/explorer?live=1h&query=&tab=view",
+    "url": "https://api.openobserve.ai/rum/explorer?live=1h&query=&tab=view",
     "in_foreground": true
   },
   "error": {
     "id": "c9ecb486-2200-4b5d-9d53-040030c3765c",
-    "message": "XHR error POST https://app.datadoghq.com/api/v1/logs-analytics/aggregate?type=rum",
+    "message": "XHR error POST https://api.openobserve.ai/api/v1/logs-analytics/aggregate?type=rum",
     "source": "network",
     "stack": "Failed to load",
     "handling": "unhandled",
@@ -25,7 +25,7 @@
     "resource": {
       "method": "POST",
       "status_code": 0,
-      "url": "https://app.datadoghq.com/api/v1/logs-analytics/aggregate?type=rum"
+      "url": "https://api.openobserve.ai/api/v1/logs-analytics/aggregate?type=rum"
     },
     "causes": [
       {
@@ -41,13 +41,18 @@
     ]
   },
   "action": {
-    "id": ["ae3a5d82-cdd1-468d-9bc9-3aa9e54d953c", "be3a5d82-cdd1-468d-9bc9-3aa9e54d953c"]
+    "id": [
+      "ae3a5d82-cdd1-468d-9bc9-3aa9e54d953c",
+      "be3a5d82-cdd1-468d-9bc9-3aa9e54d953c"
+    ]
   },
   "feature_flags": {
     "feature_one": true,
     "feature_two": "foo",
     "feature_three": 2,
-    "feature_four": { "foo": "bar" }
+    "feature_four": {
+      "foo": "bar"
+    }
   },
   "_dd": {
     "format_version": 2

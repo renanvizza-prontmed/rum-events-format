@@ -12,13 +12,13 @@
   "view": {
     "id": "623d50fd-75cf-4025-97d2-e51ff94171f6",
     "referrer": "",
-    "url": "https://app.datadoghq.com/rum/explorer?live=1h&query=&tab=view"
+    "url": "https://api.openobserve.ai/rum/explorer?live=1h&query=&tab=view"
   },
   "resource": {
     "id": "b83a5d82-cdd1-468d-9bc9-3aa9e54d957a",
     "type": "xhr",
     "method": "POST",
-    "url": "https://app.datadoghq.com/api/v1/logs-analytics/aggregate?type=rum",
+    "url": "https://api.openobserve.ai/api/v1/logs-analytics/aggregate?type=rum",
     "status_code": 200,
     "duration": 246580000,
     "size": 3599,

@@ -13,7 +13,7 @@
   "view": {
     "id": "623d50fd-75cf-4025-97d2-e51ff94171f6",
     "referrer": "",
-    "url": "https://app.datadoghq.com/rum/explorer?live=1h&query=&tab=view",
+    "url": "https://api.openobserve.ai/rum/explorer?live=1h&query=&tab=view",
     "loading_time": 4115295000,
     "loading_type": "initial_load",
     "time_spent": 245512755000,
@@ -42,8 +42,14 @@
       "count": 9
     },
     "in_foreground_periods": [
-      { "start": 1345678, "duration": 67 },
-      { "start": 1645678, "duration": 67 }
+      {
+        "start": 1345678,
+        "duration": 67
+      },
+      {
+        "start": 1645678,
+        "duration": 67
+      }
     ]
   },
   "_dd": {
@@ -82,7 +88,9 @@
     "feature_one": true,
     "feature_two": "foo",
     "feature_three": 2,
-    "feature_four": { "foo": "bar" }
+    "feature_four": {
+      "foo": "bar"
+    }
   },
   "privacy": {
     "replay_level": "mask"
