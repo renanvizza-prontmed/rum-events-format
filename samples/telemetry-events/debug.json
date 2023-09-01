@@ -1,5 +1,5 @@
 {
-  "_dd": {
+  "_oo": {
     "format_version": 2
   },
   "type": "telemetry",
@@ -19,7 +19,9 @@
   "action": {
     "id": "ae3a5d82-cdd1-468d-9bc9-3aa9e54d953c"
   },
-  "experimental_features": ["foo"],
+  "experimental_features": [
+    "foo"
+  ],
   "telemetry": {
     "status": "debug",
     "message": "Session inconsistencies detected",

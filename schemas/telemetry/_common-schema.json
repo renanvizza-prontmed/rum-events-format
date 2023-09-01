@@ -4,12 +4,21 @@
   "title": "CommonTelemetryProperties",
   "type": "object",
   "description": "Schema of common properties of Telemetry events",
-  "required": ["_dd", "type", "date", "service", "source", "version"],
+  "required": [
+    "_oo",
+    "type",
+    "date",
+    "service",
+    "source",
+    "version"
+  ],
   "properties": {
-    "_dd": {
+    "_oo": {
       "type": "object",
       "description": "Internal properties",
-      "required": ["format_version"],
+      "required": [
+        "format_version"
+      ],
       "properties": {
         "format_version": {
           "type": "integer",
@@ -37,7 +46,13 @@
     "source": {
       "type": "string",
       "description": "The source of this event",
-      "enum": ["android", "ios", "browser", "flutter", "react-native"],
+      "enum": [
+        "android",
+        "ios",
+        "browser",
+        "flutter",
+        "react-native"
+      ],
       "readOnly": true
     },
     "version": {
@@ -47,7 +62,9 @@
     "application": {
       "type": "object",
       "description": "Application properties",
-      "required": ["id"],
+      "required": [
+        "id"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -60,7 +77,9 @@
     "session": {
       "type": "object",
       "description": "Session properties",
-      "required": ["id"],
+      "required": [
+        "id"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -72,7 +91,9 @@
     "view": {
       "type": "object",
       "description": "View properties",
-      "required": ["id"],
+      "required": [
+        "id"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -84,7 +105,9 @@
     "action": {
       "type": "object",
       "description": "Action properties",
-      "required": ["id"],
+      "required": [
+        "id"
+      ],
       "properties": {
         "id": {
           "type": "string",

@@ -9,7 +9,10 @@
       "$ref": "_common-schema.json"
     },
     {
-      "required": ["type", "action"],
+      "required": [
+        "type",
+        "action"
+      ],
       "properties": {
         "type": {
           "type": "string",
@@ -20,12 +23,22 @@
         "action": {
           "type": "object",
           "description": "Action properties",
-          "required": ["type"],
+          "required": [
+            "type"
+          ],
           "properties": {
             "type": {
               "type": "string",
               "description": "Type of the action",
-              "enum": ["custom", "click", "tap", "scroll", "swipe", "application_start", "back"],
+              "enum": [
+                "custom",
+                "click",
+                "tap",
+                "scroll",
+                "swipe",
+                "application_start",
+                "back"
+              ],
               "readOnly": true
             },
             "id": {
@@ -43,7 +56,9 @@
             "target": {
               "type": "object",
               "description": "Action target properties",
-              "required": ["name"],
+              "required": [
+                "name"
+              ],
               "properties": {
                 "name": {
                   "type": "string",
@@ -56,7 +71,9 @@
             "frustration": {
               "type": "object",
               "description": "Action frustration properties",
-              "required": ["type"],
+              "required": [
+                "type"
+              ],
               "properties": {
                 "type": {
                   "type": "array",
@@ -64,7 +81,13 @@
                   "readOnly": true,
                   "items": {
                     "type": "string",
-                    "enum": ["rage_click", "dead_click", "error_click", "rage_tap", "error_tap"]
+                    "enum": [
+                      "rage_click",
+                      "dead_click",
+                      "error_click",
+                      "rage_tap",
+                      "error_tap"
+                    ]
                   }
                 }
               },
@@ -73,7 +96,9 @@
             "error": {
               "type": "object",
               "description": "Properties of the errors of the action",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -87,7 +112,9 @@
             "crash": {
               "type": "object",
               "description": "Properties of the crashes of the action",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -101,7 +128,9 @@
             "long_task": {
               "type": "object",
               "description": "Properties of the long tasks of the action",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -115,7 +144,9 @@
             "resource": {
               "type": "object",
               "description": "Properties of the resources of the action",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -142,7 +173,7 @@
           },
           "readOnly": true
         },
-        "_dd": {
+        "_oo": {
           "type": "object",
           "description": "Internal properties",
           "properties": {
@@ -153,7 +184,10 @@
                 "position": {
                   "type": "object",
                   "description": "Action position properties",
-                  "required": ["x", "y"],
+                  "required": [
+                    "x",
+                    "y"
+                  ],
                   "properties": {
                     "x": {
                       "type": "integer",

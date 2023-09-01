@@ -12,7 +12,10 @@
       "$ref": "_action-child-schema.json"
     },
     {
-      "required": ["type", "resource"],
+      "required": [
+        "type",
+        "resource"
+      ],
       "properties": {
         "type": {
           "type": "string",
@@ -23,7 +26,10 @@
         "resource": {
           "type": "object",
           "description": "Resource properties",
-          "required": ["type", "url"],
+          "required": [
+            "type",
+            "url"
+          ],
           "properties": {
             "id": {
               "type": "string",
@@ -34,13 +40,32 @@
             "type": {
               "type": "string",
               "description": "Resource type",
-              "enum": ["document", "xhr", "beacon", "fetch", "css", "js", "image", "font", "media", "other", "native"],
+              "enum": [
+                "document",
+                "xhr",
+                "beacon",
+                "fetch",
+                "css",
+                "js",
+                "image",
+                "font",
+                "media",
+                "other",
+                "native"
+              ],
               "readOnly": true
             },
             "method": {
               "type": "string",
               "description": "HTTP method of the resource",
-              "enum": ["POST", "GET", "HEAD", "PUT", "DELETE", "PATCH"],
+              "enum": [
+                "POST",
+                "GET",
+                "HEAD",
+                "PUT",
+                "DELETE",
+                "PATCH"
+              ],
               "readOnly": true
             },
             "url": {
@@ -69,7 +94,10 @@
             "redirect": {
               "type": "object",
               "description": "Redirect phase properties",
-              "required": ["duration", "start"],
+              "required": [
+                "duration",
+                "start"
+              ],
               "properties": {
                 "duration": {
                   "type": "integer",
@@ -89,7 +117,10 @@
             "dns": {
               "type": "object",
               "description": "DNS phase properties",
-              "required": ["duration", "start"],
+              "required": [
+                "duration",
+                "start"
+              ],
               "properties": {
                 "duration": {
                   "type": "integer",
@@ -109,7 +140,10 @@
             "connect": {
               "type": "object",
               "description": "Connect phase properties",
-              "required": ["duration", "start"],
+              "required": [
+                "duration",
+                "start"
+              ],
               "properties": {
                 "duration": {
                   "type": "integer",
@@ -129,7 +163,10 @@
             "ssl": {
               "type": "object",
               "description": "SSL phase properties",
-              "required": ["duration", "start"],
+              "required": [
+                "duration",
+                "start"
+              ],
               "properties": {
                 "duration": {
                   "type": "integer",
@@ -149,7 +186,10 @@
             "first_byte": {
               "type": "object",
               "description": "First Byte phase properties",
-              "required": ["duration", "start"],
+              "required": [
+                "duration",
+                "start"
+              ],
               "properties": {
                 "duration": {
                   "type": "integer",
@@ -169,7 +209,10 @@
             "download": {
               "type": "object",
               "description": "Download phase properties",
-              "required": ["duration", "start"],
+              "required": [
+                "duration",
+                "start"
+              ],
               "properties": {
                 "duration": {
                   "type": "integer",
@@ -227,7 +270,7 @@
           },
           "readOnly": true
         },
-        "_dd": {
+        "_oo": {
           "type": "object",
           "description": "Internal properties",
           "properties": {

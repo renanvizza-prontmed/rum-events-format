@@ -9,7 +9,11 @@
       "$ref": "_common-schema.json"
     },
     {
-      "required": ["type", "view", "_dd"],
+      "required": [
+        "type",
+        "view",
+        "_oo"
+      ],
       "properties": {
         "type": {
           "type": "string",
@@ -20,7 +24,14 @@
         "view": {
           "type": "object",
           "description": "View properties",
-          "required": ["id", "url", "time_spent", "action", "error", "resource"],
+          "required": [
+            "id",
+            "url",
+            "time_spent",
+            "action",
+            "error",
+            "resource"
+          ],
           "properties": {
             "loading_time": {
               "type": "integer",
@@ -138,7 +149,9 @@
             "action": {
               "type": "object",
               "description": "Properties of the actions of the view",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -152,7 +165,9 @@
             "error": {
               "type": "object",
               "description": "Properties of the errors of the view",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -166,7 +181,9 @@
             "crash": {
               "type": "object",
               "description": "Properties of the crashes of the view",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -180,7 +197,9 @@
             "long_task": {
               "type": "object",
               "description": "Properties of the long tasks of the view",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -194,7 +213,9 @@
             "frozen_frame": {
               "type": "object",
               "description": "Properties of the frozen frames of the view",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -208,7 +229,9 @@
             "resource": {
               "type": "object",
               "description": "Properties of the resources of the view",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -222,7 +245,9 @@
             "frustration": {
               "type": "object",
               "description": "Properties of the frustrations of the view",
-              "required": ["count"],
+              "required": [
+                "count"
+              ],
               "properties": {
                 "count": {
                   "type": "integer",
@@ -239,7 +264,10 @@
               "items": {
                 "type": "object",
                 "description": "Properties of the foreground period of the view",
-                "required": ["duration", "start"],
+                "required": [
+                  "duration",
+                  "start"
+                ],
                 "properties": {
                   "start": {
                     "type": "integer",
@@ -290,15 +318,27 @@
             },
             "flutter_build_time": {
               "description": "Time taken for Flutter 'build' methods.",
-              "allOf": [{ "$ref": "_perf-metric-schema.json" }]
+              "allOf": [
+                {
+                  "$ref": "_perf-metric-schema.json"
+                }
+              ]
             },
             "flutter_raster_time": {
               "description": "Time taken for Flutter to rasterize the view.",
-              "allOf": [{ "$ref": "_perf-metric-schema.json" }]
+              "allOf": [
+                {
+                  "$ref": "_perf-metric-schema.json"
+                }
+              ]
             },
             "js_refresh_rate": {
               "description": "The JavaScript refresh rate for React Native",
-              "allOf": [{ "$ref": "_perf-metric-schema.json" }]
+              "allOf": [
+                {
+                  "$ref": "_perf-metric-schema.json"
+                }
+              ]
             }
           },
           "readOnly": true
@@ -311,7 +351,13 @@
             "start_precondition": {
               "type": "string",
               "description": "The precondition that led to the creation of the session",
-              "enum": ["app_launch", "inactivity_timeout", "max_duration", "explicit_stop", "background_event"],
+              "enum": [
+                "app_launch",
+                "inactivity_timeout",
+                "max_duration",
+                "explicit_stop",
+                "background_event"
+              ],
               "readOnly": true
             },
             "is_active": {
@@ -337,21 +383,29 @@
         "privacy": {
           "type": "object",
           "description": "Privacy properties",
-          "required": ["replay_level"],
+          "required": [
+            "replay_level"
+          ],
           "properties": {
             "replay_level": {
               "type": "string",
               "description": "The replay privacy level",
-              "enum": ["allow", "mask", "mask-user-input"],
+              "enum": [
+                "allow",
+                "mask",
+                "mask-user-input"
+              ],
               "readOnly": true
             }
           },
           "readOnly": true
         },
-        "_dd": {
+        "_oo": {
           "type": "object",
           "description": "Internal properties",
-          "required": ["document_version"],
+          "required": [
+            "document_version"
+          ],
           "properties": {
             "document_version": {
               "type": "integer",
@@ -365,10 +419,19 @@
               "items": {
                 "type": "object",
                 "description": "Properties of the page state",
-                "required": ["state", "start"],
+                "required": [
+                  "state",
+                  "start"
+                ],
                 "properties": {
                   "state": {
-                    "enum": ["active", "passive", "hidden", "frozen", "terminated"],
+                    "enum": [
+                      "active",
+                      "passive",
+                      "hidden",
+                      "frozen",
+                      "terminated"
+                    ],
                     "description": "Page state name",
                     "readOnly": true
                   },
@@ -417,7 +480,12 @@
             "scroll": {
               "type": "object",
               "description": "Scroll properties",
-              "required": ["max_depth", "max_depth_scroll_height", "max_depth_scroll_top", "max_depth_time"],
+              "required": [
+                "max_depth",
+                "max_depth_scroll_height",
+                "max_depth_scroll_top",
+                "max_depth_time"
+              ],
               "properties": {
                 "max_depth": {
                   "type": "number",

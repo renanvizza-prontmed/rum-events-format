@@ -4,7 +4,13 @@
   "title": "CommonProperties",
   "type": "object",
   "description": "Schema of common properties of RUM events",
-  "required": ["date", "application", "session", "view", "_dd"],
+  "required": [
+    "date",
+    "application",
+    "session",
+    "view",
+    "_oo"
+  ],
   "properties": {
     "date": {
       "type": "integer",
@@ -15,7 +21,9 @@
     "application": {
       "type": "object",
       "description": "Application properties",
-      "required": ["id"],
+      "required": [
+        "id"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -39,7 +47,10 @@
     "session": {
       "type": "object",
       "description": "Session properties",
-      "required": ["id", "type"],
+      "required": [
+        "id",
+        "type"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -50,7 +61,11 @@
         "type": {
           "type": "string",
           "description": "Type of the session",
-          "enum": ["user", "synthetics", "ci_test"],
+          "enum": [
+            "user",
+            "synthetics",
+            "ci_test"
+          ],
           "readOnly": true
         },
         "has_replay": {
@@ -64,13 +79,23 @@
     "source": {
       "type": "string",
       "description": "The source of this event",
-      "enum": ["android", "ios", "browser", "flutter", "react-native", "roku"],
+      "enum": [
+        "android",
+        "ios",
+        "browser",
+        "flutter",
+        "react-native",
+        "roku"
+      ],
       "readOnly": true
     },
     "view": {
       "type": "object",
       "description": "View properties",
-      "required": ["id", "url"],
+      "required": [
+        "id",
+        "url"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -122,12 +147,19 @@
     "connectivity": {
       "type": "object",
       "description": "Device connectivity properties",
-      "required": ["status", "interfaces"],
+      "required": [
+        "status",
+        "interfaces"
+      ],
       "properties": {
         "status": {
           "type": "string",
           "description": "Status of the device connectivity",
-          "enum": ["connected", "not_connected", "maybe"],
+          "enum": [
+            "connected",
+            "not_connected",
+            "maybe"
+          ],
           "readOnly": true
         },
         "interfaces": {
@@ -135,7 +167,17 @@
           "description": "The list of available network interfaces",
           "items": {
             "type": "string",
-            "enum": ["bluetooth", "cellular", "ethernet", "wifi", "wimax", "mixed", "other", "unknown", "none"]
+            "enum": [
+              "bluetooth",
+              "cellular",
+              "ethernet",
+              "wifi",
+              "wimax",
+              "mixed",
+              "other",
+              "unknown",
+              "none"
+            ]
           },
           "readOnly": true
         },
@@ -165,7 +207,10 @@
         "viewport": {
           "type": "object",
           "description": "The viewport represents the rectangular area that is currently being viewed. Content outside the viewport is not visible onscreen until scrolled into view.",
-          "required": ["width", "height"],
+          "required": [
+            "width",
+            "height"
+          ],
           "properties": {
             "width": {
               "type": "number",
@@ -185,7 +230,10 @@
     "synthetics": {
       "type": "object",
       "description": "Synthetics properties",
-      "required": ["test_id", "result_id"],
+      "required": [
+        "test_id",
+        "result_id"
+      ],
       "properties": {
         "test_id": {
           "type": "string",
@@ -208,7 +256,9 @@
     "ci_test": {
       "type": "object",
       "description": "CI Visibility properties",
-      "required": ["test_execution_id"],
+      "required": [
+        "test_execution_id"
+      ],
       "properties": {
         "test_execution_id": {
           "type": "string",
@@ -221,7 +271,11 @@
     "os": {
       "type": "object",
       "description": "Operating system properties",
-      "required": ["name", "version", "version_major"],
+      "required": [
+        "name",
+        "version",
+        "version_major"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -248,12 +302,22 @@
     "device": {
       "type": "object",
       "description": "Device properties",
-      "required": ["type"],
+      "required": [
+        "type"
+      ],
       "properties": {
         "type": {
           "type": "string",
           "description": "Device type info",
-          "enum": ["mobile", "desktop", "tablet", "tv", "gaming_console", "bot", "other"],
+          "enum": [
+            "mobile",
+            "desktop",
+            "tablet",
+            "tv",
+            "gaming_console",
+            "bot",
+            "other"
+          ],
           "readOnly": true
         },
         "name": {
@@ -278,10 +342,12 @@
         }
       }
     },
-    "_dd": {
+    "_oo": {
       "type": "object",
       "description": "Internal properties",
-      "required": ["format_version"],
+      "required": [
+        "format_version"
+      ],
       "properties": {
         "format_version": {
           "type": "integer",
@@ -296,7 +362,10 @@
             "plan": {
               "type": "number",
               "description": "Session plan: 1 is the plan without replay, 2 is the plan with replay (deprecated)",
-              "enum": [1, 2]
+              "enum": [
+                1,
+                2
+              ]
             }
           }
         },
@@ -304,7 +373,9 @@
           "type": "object",
           "description": "Subset of the SDK configuration options in use during its execution",
           "readOnly": true,
-          "required": ["session_sample_rate"],
+          "required": [
+            "session_sample_rate"
+          ],
           "properties": {
             "session_sample_rate": {
               "type": "number",
