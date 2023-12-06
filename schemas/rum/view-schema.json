@@ -9,7 +9,7 @@
       "$ref": "_common-schema.json"
     },
     {
-      "required": ["type", "view", "_dd"],
+      "required": ["type", "view", "_oo"],
       "properties": {
         "type": {
           "type": "string",
@@ -61,6 +61,11 @@
               "minimum": 0,
               "readOnly": true
             },
+            "largest_contentful_paint_target_selector": {
+              "type": "string",
+              "description": "CSS selector path of the largest contentful paint element",
+              "readOnly": true
+            },
             "first_input_delay": {
               "type": "integer",
               "description": "Duration in ns of the first input event delay",
@@ -73,16 +78,31 @@
               "minimum": 0,
               "readOnly": true
             },
+            "first_input_target_selector": {
+              "type": "string",
+              "description": "CSS selector path of the first input target element",
+              "readOnly": true
+            },
             "interaction_to_next_paint": {
               "type": "integer",
               "description": "Longest duration in ns between an interaction and the next paint",
               "minimum": 0,
               "readOnly": true
             },
+            "interaction_to_next_paint_target_selector": {
+              "type": "string",
+              "description": "CSS selector path of the interacted element corresponding to INP",
+              "readOnly": true
+            },
             "cumulative_layout_shift": {
               "type": "number",
               "description": "Total layout shift score that occurred on the view",
               "minimum": 0,
+              "readOnly": true
+            },
+            "cumulative_layout_shift_target_selector": {
+              "type": "string",
+              "description": "CSS selector path of the first element (in document order) of the largest layout shift contributing to CLS",
               "readOnly": true
             },
             "dom_complete": {
@@ -348,7 +368,7 @@
           },
           "readOnly": true
         },
-        "_dd": {
+        "_oo": {
           "type": "object",
           "description": "Internal properties",
           "required": ["document_version"],
@@ -405,6 +425,18 @@
                   "default": 0
                 }
               }
+            },
+            "configuration": {
+              "type": "object",
+              "description": "Subset of the SDK configuration options in use during its execution",
+              "readOnly": true,
+              "properties": {
+                "start_session_replay_recording_manually": {
+                  "type": "boolean",
+                  "description": "Whether session replay recording configured to start manually",
+                  "readOnly": true
+                }
+              }
             }
           },
           "readOnly": true
@@ -417,16 +449,11 @@
             "scroll": {
               "type": "object",
               "description": "Scroll properties",
-              "required": ["max_depth", "max_depth_scroll_height", "max_depth_scroll_top", "max_depth_time"],
+              "required": ["max_depth", "max_depth_scroll_top", "max_scroll_height", "max_scroll_height_time"],
               "properties": {
                 "max_depth": {
                   "type": "number",
                   "description": "Distance between the top and the lowest point reached on this view (in pixels)",
-                  "readOnly": true
-                },
-                "max_depth_scroll_height": {
-                  "type": "number",
-                  "description": "Page scroll height (total height) when the maximum scroll depth was reached for this view (in pixels)",
                   "readOnly": true
                 },
                 "max_depth_scroll_top": {
@@ -434,9 +461,14 @@
                   "description": "Page scroll top (scrolled distance) when the maximum scroll depth was reached for this view (in pixels)",
                   "readOnly": true
                 },
-                "max_depth_time": {
+                "max_scroll_height": {
                   "type": "number",
-                  "description": "Duration between the view start and the scroll event that reached the maximum scroll depth for this view (in nanoseconds)",
+                  "description": "Maximum page scroll height (total height) for this view (in pixels)",
+                  "readOnly": true
+                },
+                "max_scroll_height_time": {
+                  "type": "number",
+                  "description": "Duration between the view start and the time the max scroll height was reached for this view (in nanoseconds)",
                   "readOnly": true
                 }
               },

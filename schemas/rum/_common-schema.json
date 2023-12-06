@@ -4,7 +4,7 @@
   "title": "CommonProperties",
   "type": "object",
   "description": "Schema of common properties of RUM events",
-  "required": ["date", "application", "session", "view", "_dd"],
+  "required": ["date", "application", "session", "view", "_oo"],
   "properties": {
     "date": {
       "type": "integer",
@@ -34,6 +34,11 @@
     "version": {
       "type": "string",
       "description": "The version for this application",
+      "readOnly": true
+    },
+    "build_version": {
+      "type": "string",
+      "description": "The build version for this application",
       "readOnly": true
     },
     "session": {
@@ -278,7 +283,7 @@
         }
       }
     },
-    "_dd": {
+    "_oo": {
       "type": "object",
       "description": "Internal properties",
       "required": ["format_version"],
